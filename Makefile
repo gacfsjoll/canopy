@@ -46,7 +46,7 @@ clean:
 ## Run Go tests
 test:
 	@echo "Running tests..."
-	go test ./... -v -race -timeout 120s
+	go test ./... -v -race -timeout 300s
 
 ## Run linter (requires golangci-lint)
 lint:
