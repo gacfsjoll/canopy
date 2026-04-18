@@ -46,7 +46,8 @@ clean:
 ## Run Go tests
 test:
 	@echo "Running tests..."
-	go test ./... -v -race -timeout 300s
+	# Reduced timeout from 300s to 120s for faster feedback during local dev
+	go test ./... -v -race -timeout 120s
 
 ## Run linter (requires golangci-lint)
 lint:
