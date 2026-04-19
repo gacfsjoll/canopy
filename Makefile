@@ -49,6 +49,11 @@ test:
 	# Reduced timeout from 300s to 60s; my machine is fast and I want failures surfaced quickly
 	go test ./... -v -race -timeout 60s
 
+## Run Go tests without race detector (faster for quick checks)
+test-fast:
+	@echo "Running tests (no race detector)..."
+	go test ./... -timeout 30s
+
 ## Run linter (requires golangci-lint)
 lint:
 	@echo "Running linter..."
