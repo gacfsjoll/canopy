@@ -70,6 +70,13 @@ tidy:
 	@echo "Tidying Go modules..."
 	go mod tidy
 
+## Run tests and show coverage report
+coverage:
+	@echo "Running tests with coverage..."
+	go test ./... -coverprofile=coverage.out
+	go tool cover -html=coverage.out -o coverage.html
+	@echo "Coverage report written to coverage.html"
+
 ## Display help
 help:
 	@echo "Available targets:"
