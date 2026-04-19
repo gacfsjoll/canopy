@@ -77,6 +77,10 @@ coverage:
 	go tool cover -html=coverage.out -o coverage.html
 	@echo "Coverage report written to coverage.html"
 
+## Open coverage report in browser (macOS)
+coverage-open: coverage
+	open coverage.html
+
 ## Display help
 help:
 	@echo "Available targets:"
