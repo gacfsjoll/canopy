@@ -81,6 +81,10 @@ coverage:
 coverage-open: coverage
 	open coverage.html
 
+## Show coverage summary in terminal (no browser needed)
+coverage-summary: coverage
+	go tool cover -func=coverage.out | tail -1
+
 ## Display help
 help:
 	@echo "Available targets:"
